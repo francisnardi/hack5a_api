@@ -32,7 +32,7 @@ def serviceTypeList():
 def availableServicesForInternet():
     return jsonify(
      {
-        "connectionSpeed" : "40 MB",
+        "connectionSpeed" : "TIM 40 MB",
         "offers" : [
             {
                 "id" : 1,
@@ -52,7 +52,7 @@ def availableServicesForInternet():
         ]
      },
      {
-         "connectionSpeed" : "60 MB",
+         "connectionSpeed" : "VIVO 60 MB",
          "offers" : [
              {
                  "id" : 1,
@@ -72,7 +72,7 @@ def availableServicesForInternet():
          ]
      },
      {
-         "connectionSpeed" : "100 MB",
+         "connectionSpeed" : "TIM 100 MB",
          "offers" : [
              {
                  "id" : 1,
@@ -92,7 +92,7 @@ def availableServicesForInternet():
          ]
      },
      {
-         "connectionSpeed" : "200 MB",
+         "connectionSpeed" : "VIVO 200 MB",
          "offers" : [
              {
                  "id" : 1,
