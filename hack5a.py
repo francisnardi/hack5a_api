@@ -112,7 +112,6 @@ def availableServicesForInternet():
          ]
      })
 
-
 @app.route('/servicesListForPhone')
 def servicesListForPhone():
     return jsonify(
@@ -130,7 +129,7 @@ def servicesListForPhone():
          "id" : 3,
          "name" : "Fixo + Móvel Brasil",
          "price" : 149.00
-     }
+     })
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
