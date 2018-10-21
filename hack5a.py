@@ -28,7 +28,7 @@ def serviceTypeList():
         "imageName" : "Assurance"
     })
 
-@app.route('/availableServicesForInternet)
+@app.route('/availableServicesForInternet')
 def availableServicesForInternet():
     return jsonify(
      {
