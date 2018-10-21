@@ -8,7 +8,7 @@ app = Flask(__name__)
 def serviceTypeList():
     return jsonify(
     {
-        "id":1,
+        "id": 1,
         "name": "Internet, telefone, TV a cabo",
         "imageName" : "Internet"
     },
@@ -27,6 +27,90 @@ def serviceTypeList():
     	"name": "Seguro",
         "imageName" : "Assurance"
     })
+
+@app.route('/availableServicesForInternet)
+def availableServicesForInternet():
+    return jsonify(
+     {
+        "connectionSpeed" : "40 MB",
+        "offers" : [
+            {
+                "id" : 1,
+                "name" : "NET",
+                "price" : 59.99
+            },
+            {
+                "id" : 2,
+                "name" : "Vivo",
+                "price" : 125.00
+            },
+            {
+                "id" : 3,
+                "name" : "TIM",
+                "price" : 105.00
+            }
+        ]
+     },
+     {
+         "connectionSpeed" : "60 MB",
+         "offers" : [
+             {
+                 "id" : 1,
+                 "name" : "NET",
+                 "price" : 79.00
+             },
+             {
+                 "id" : 2,
+                 "name" : "Vivo",
+                 "price" : 145.00
+             },
+             {
+                 "id" : 3,
+                 "name" : "TIM",
+                 "price" : 105.80
+             }
+         ]
+     },
+     {
+         "connectionSpeed" : "100 MB",
+         "offers" : [
+             {
+                 "id" : 1,
+                 "name" : "NET",
+                 "price" : 79.00
+             },
+             {
+                 "id" : 2,
+                 "name" : "Vivo",
+                 "price" : 165.00
+             },
+             {
+                 "id" : 3,
+                 "name" : "TIM",
+                 "price" : 97.50
+             }
+         ]
+     },
+     {
+         "connectionSpeed" : "200 MB",
+         "offers" : [
+             {
+                 "id" : 1,
+                 "name" : "NET",
+                 "price" : 139.00
+             },
+             {
+                 "id" : 2,
+                 "name" : "Vivo",
+                 "price" : 185.00
+             },
+             {
+                 "id" : 3,
+                 "name" : "TIM",
+                 "price" : 120.00
+             }
+         ]
+     })
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
