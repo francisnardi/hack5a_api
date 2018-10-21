@@ -131,6 +131,28 @@ def servicesListForPhone():
          "price" : 149.00
      })
 
+@app.route('/servicesListForTV')
+def servicesListForTV():
+    return jsonify(
+     {
+         "id" : 1,
+         "name" : "Mix HD",
+         "price" : 59.00,
+         "channels" : "222 canais"
+     },
+     {
+         "id" : 2,
+         "name" : "Fácil HD",
+         "price" : 79.99,
+         "channels" : "112 canais"
+     },
+     {
+         "id" : 3,
+         "name" : "Top HD",
+         "price" : 139.99,
+         "channels" : "259 canais"
+     })
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
